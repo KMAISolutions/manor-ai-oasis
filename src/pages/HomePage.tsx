@@ -72,7 +72,7 @@ const HomePage = () => {
         
         <div className="container mx-auto px-4 z-10 text-white text-center">
           <img alt="Kings Court Logo" src="/lovable-uploads/a59c40a4-3ed0-460b-b037-903a2cc0ba5e.jpg" className="w-48 mx-auto mb-6 object-fill" />
-          <h1 className="font-serif text-4xl mb-4 text-shadow text-[#d4af37] font-bold md:text-6xl">Welcome to The King's Court</h1>
+          <h1 className="font-serif text-4xl font-bold mb-4 text-shadow md:text-[[#D4AF37]] text-[#d4af37]">Welcome to The King's Court</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-shadow">Experience luxury accommodation in the heart of South Africa</p>
           <div className="flex gap-4 justify-center">
             <Link to="/rooms">
@@ -90,49 +90,49 @@ const HomePage = () => {
       </div>
       
       {/* Quick Info Section */}
-      <div className="bg-white py-8">
+      <div className="my-0 py-[25px] bg-slate-200">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div className="flex flex-col items-center p-4">
-              <Bed size={32} className="text-manor-gold mb-2" />
-              <p className="text-sm md:text-base">Luxury Rooms</p>
+              <Bed size={32} className="text-manor-gold mb-2 bg-[D]" />
+              <p className="text-sm py-0 text-black md:text-lg">Luxury Rooms</p>
             </div>
             <div className="flex flex-col items-center p-4">
               <Wifi size={32} className="text-manor-gold mb-2" />
-              <p className="text-sm md:text-base">Free WiFi</p>
+              <p className="text-sm text-black md:text-lg">Free WiFi</p>
             </div>
             <div className="flex flex-col items-center p-4">
               <Calendar size={32} className="text-manor-gold mb-2" />
-              <p className="text-sm md:text-base">Event Facilities</p>
+              <p className="text-sm text-black md:text-lg">Event Facilities</p>
             </div>
             <div className="flex flex-col items-center p-4">
               <MapPin size={32} className="text-manor-gold mb-2" />
-              <p className="text-sm md:text-base">Prime Location</p>
+              <p className="text-sm text-black md:text-lg">Prime Location</p>
             </div>
           </div>
         </div>
       </div>
       
       {/* About Section */}
-      <div className="py-20 bg-gray-50">
+      <div className="py-[32px] bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="scroll-animation">
-              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117174162.jpg?k=306f853bd5763956add54358df2126e07fcd3f192a1d24c53935d112e7519c7b&o=&hp=1" alt="The King's Court Building" className="rounded-lg shadow-lg w-full h-auto" />
+              <img alt="The King's Court Building" className="rounded-lg shadow-lg w-full h-auto" src="/lovable-uploads/5498925a-a717-429c-9c26-fb11adf7cc41.jpg" />
             </div>
             <div className="scroll-animation">
-              <h2 className="font-serif text-3xl md:text-4xl mb-6">A Luxurious Escape in South Africa</h2>
-              <p className="mb-6 text-gray-700">
+              <h2 className="font-serif text-3xl mb-6 text-[#d4af37] text-center md:text-4xl">A Luxurious Escape in Bela-Bela South Africa</h2>
+              <p className="mb-6 text-white">
                 The King's Court Guest Manor offers a perfect blend of comfort, luxury, and warm hospitality. 
                 Our beautiful property provides a tranquil retreat while being conveniently located 
                 close to major attractions.
               </p>
-              <p className="mb-8 text-gray-700">
+              <p className="mb-8 text-white">
                 With meticulously designed rooms, exceptional dining options, and personalized service, 
                 we ensure that every guest experiences the best of South African hospitality.
               </p>
               <Link to="/about">
-                <Button className="bg-manor-green hover:bg-manor-green/90 text-white">
+                <Button className="text-white bg-slate-900 hover:bg-slate-800 font-extrabold text-lg">
                   Learn More About Us
                 </Button>
               </Link>
@@ -142,10 +142,10 @@ const HomePage = () => {
       </div>
       
       {/* Rooms Section */}
-      <div className="py-20">
+      <div className="py-[36px] bg-slate-200">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h6 className="text-[#D4AF37] font-medium mb-2">ACCOMMODATION</h6>
+            <h6 className="text-[#D4AF37] mb-2 text-5xl font-bold">ACCOMMODATION</h6>
             <h2 className="font-serif text-3xl md:text-4xl mb-4">Our Elegant Rooms</h2>
             <p className="max-w-2xl mx-auto text-gray-600">
               Comfortable Accommodation is what you get at The King's Court Guest Manor in Bela Bela, 
@@ -158,10 +158,10 @@ const HomePage = () => {
       </div>
       
       {/* Facilities Section */}
-      <div className="py-20">
-        <div className="container mx-auto px-4">
+      <div className="py-[16px] bg-slate-900">
+        <div className="container mx-auto px-[15px] py-0">
           <div className="text-center mb-12">
-            <h6 className="text-[#D4AF37] font-medium mb-2">OUR FACILITIES</h6>
+            <h6 className="text-[#D4AF37] mb-2 text-5xl font-bold">OUR FACILITIES</h6>
             <h2 className="font-serif text-3xl md:text-4xl mb-4">Amenities & Services</h2>
             <p className="max-w-2xl mx-auto text-gray-600">
               We offer a range of facilities and services to make your stay comfortable and memorable.
@@ -214,11 +214,11 @@ const HomePage = () => {
       </div>
       
       {/* Testimonials Section */}
-      <div className="py-20 bg-gray-50">
+      <div className="py-[28px] bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h6 className="text-manor-gold font-medium mb-2">TESTIMONIALS</h6>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">What Our Guests Say</h2>
+            <h2 className="font-serif text-3xl mb-4 md:text-[[#D4AF37] text-[#d4af37]">What Our Guests Say</h2>
             <p className="max-w-2xl mx-auto text-gray-600">
               Read about the experiences of guests who have stayed at The King's Court Guest Manor.
             </p>
