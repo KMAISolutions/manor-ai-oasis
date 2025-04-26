@@ -5,33 +5,27 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { register as registerServiceWorker } from "./serviceWorkerRegistration";
-
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import AIAssistant from "@/components/ui/AIAssistant";
-
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import RoomsPage from "./pages/RoomsPage";
 import ContactPage from "./pages/ContactPage";
 import FacilitiesPage from "./pages/FacilitiesPage";
 import NotFound from "./pages/NotFound";
-
 const queryClient = new QueryClient();
-
 const App = () => {
   useEffect(() => {
     registerServiceWorker();
   }, []);
-
-  return (
-    <QueryClientProvider client={queryClient}>
+  return <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
         <BrowserRouter>
           <Navbar />
-          <main className="pt-16">
+          <main className="pt-16 bg-slate-200">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -45,8 +39,6 @@ const App = () => {
           <AIAssistant />
         </BrowserRouter>
       </TooltipProvider>
-    </QueryClientProvider>
-  );
+    </QueryClientProvider>;
 };
-
 export default App;

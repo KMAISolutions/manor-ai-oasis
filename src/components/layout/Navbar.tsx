@@ -19,7 +19,7 @@ const Navbar = () => {
   return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center bg-slate-900">
         <Link to="/" className="flex items-center">
-          <img src="/lovable-uploads/3c307e3d-1c63-4d5e-9c4f-140675be7960.png" alt="Kings Court Logo" className="h-12 mr-2" />
+          <img alt="Kings Court Logo" className="h-12 mr-2" src="/lovable-uploads/e79c1127-d74a-4e00-950b-0f4102e389f5.jpg" />
         </Link>
         
         <div className="hidden md:flex items-center space-x-6">
