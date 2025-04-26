@@ -1,0 +1,22 @@
+
+{
+  "name": "The King's Court Guest Manor",
+  "short_name": "King's Court",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F1E8",
+  "theme_color": "#2A5D4C",
+  "description": "Luxury accommodation at The King's Court Guest Manor",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
