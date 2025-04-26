@@ -14,8 +14,8 @@ const RoomsPage = () => {
           <div className="absolute inset-0 hero-gradient"></div>
         </div>
         <div className="container mx-auto px-4 z-10 text-white text-center">
-          <h1 className="font-serif text-4xl mb-2 text-shadow text-[#d4af37] font-extrabold md:text-6xl">Our Rooms</h1>
-          <p className="max-w-3xl mx-auto text-shadow font-semibold text-3xl">Experience luxury in our elegantly appointed rooms</p>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-2 text-shadow">Our Rooms</h1>
+          <p className="text-xl max-w-3xl mx-auto text-shadow">Experience luxury in our elegantly appointed rooms</p>
         </div>
       </div>
 
@@ -29,13 +29,13 @@ const RoomsPage = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="king-suite" className="max-w-6xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 bg-slate-900">
-            <TabsTrigger value="king-suite" className="text-white bg-slate-800 hover:bg-slate-700 mx-[16px]">Deluxe King Suite</TabsTrigger>
-            <TabsTrigger value="double-room" className="text-white bg-slate-800 hover:bg-slate-700 mx-[16px]">Deluxe Double Room</TabsTrigger>
+        <Tabs defaultValue="king-suite" className="max-w-6xl mx-auto bg-cyan-50">
+          <TabsList className="grid w-full grid-cols-2">
+            <TabsTrigger value="king-suite">Deluxe King Suite</TabsTrigger>
+            <TabsTrigger value="double-room">Deluxe Double Room</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="king-suite">
+          <TabsContent value="king-suite" className="text-[#d4af37] font-extrabold text-4xl">
             <Card>
               <CardContent className="grid md:grid-cols-2 gap-8 p-6">
                 <div className="relative h-[400px] overflow-hidden rounded-lg">
@@ -84,23 +84,23 @@ const RoomsPage = () => {
 
           <TabsContent value="double-room">
             <Card>
-              <CardContent className="grid md:grid-cols-2 gap-8 p-6 bg-slate-900">
-                <div className="relative h-[400px] overflow-hidden rounded-lg text-[[#D4AF37] text-[#d4af37]">
+              <CardContent className="grid md:grid-cols-2 gap-8 p-6">
+                <div className="relative h-[400px] overflow-hidden rounded-lg">
                   <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117175723.jpg?k=f40dc9c0aa40beb8dca45e0e894e05a6cb960963e7acf9a8c15f2019e22c2775&o=&hp=1" alt="Deluxe Double Room" className="w-full h-full object-cover" />
                 </div>
                 <div className="space-y-6">
                   <div>
-                    <h2 className="font-serif mb-2 text-[w#D4AF37] text-[#d4af37]">Deluxe Double Room</h2>
+                    <h2 className="font-serif text-2xl mb-2">Deluxe Double Room</h2>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                      <span className="text-[[#D4AF37] text-[#d4af37]">40 m²</span>
-                      <span className="text-[[#D4AF37] text-[#d4af37]">View</span>
-                      <span className="text-[#d4af37]">1 bathroom</span>
+                      <span>40 m²</span>
+                      <span>View</span>
+                      <span>1 bathroom</span>
                     </div>
                   </div>
 
                   <div>
-                    <h3 className="font-medium mb-2 text-[#d4af37]">Bed:</h3>
-                    <div className="flex items-center gap-2 text-sm bg-[s#D4AF37] bg-[#d4af37]">
+                    <h3 className="font-medium mb-2">Bed:</h3>
+                    <div className="flex items-center gap-2 text-sm">
                       <Bed size={16} /> 1 double bed
                     </div>
                   </div>
