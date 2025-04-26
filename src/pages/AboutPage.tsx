@@ -1,69 +1,52 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Star, Users } from "lucide-react";
-
 const AboutPage = () => {
-  const team = [
-    {
-      name: "Jonathan King",
-      position: "Owner & Managing Director",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-      bio: "With over 20 years in the hospitality industry, Jonathan brings passion and expertise to ensure every guest has an exceptional experience."
-    },
-    {
-      name: "Elizabeth Moore",
-      position: "General Manager",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-      bio: "Elizabeth oversees all aspects of the guest manor, ensuring that operations run smoothly and guests receive the highest level of service."
-    },
-    {
-      name: "Michael Chen",
-      position: "Head Chef",
-      image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-      bio: "A culinary artist with international experience, Michael creates exquisite dishes that delight our guests with local and international flavors."
-    }
-  ];
-
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah M.",
-      location: "United Kingdom",
-      quote: "The King's Court exceeded all my expectations. The service was impeccable and the rooms luxurious.",
-      rating: 5
-    },
-    {
-      id: 2,
-      name: "David L.",
-      location: "Australia",
-      quote: "Beautiful gardens, excellent food, and the most comfortable bed I've ever slept in. Will definitely return!",
-      rating: 5
-    },
-    {
-      id: 3,
-      name: "Maria J.",
-      location: "Germany",
-      quote: "A truly peaceful retreat with wonderful staff who made our stay special. The attention to detail was remarkable.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <>
+  const team = [{
+    name: "Jonathan King",
+    position: "Owner & Managing Director",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
+    bio: "With over 20 years in the hospitality industry, Jonathan brings passion and expertise to ensure every guest has an exceptional experience."
+  }, {
+    name: "Elizabeth Moore",
+    position: "General Manager",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
+    bio: "Elizabeth oversees all aspects of the guest manor, ensuring that operations run smoothly and guests receive the highest level of service."
+  }, {
+    name: "Michael Chen",
+    position: "Head Chef",
+    image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
+    bio: "A culinary artist with international experience, Michael creates exquisite dishes that delight our guests with local and international flavors."
+  }];
+  const testimonials = [{
+    id: 1,
+    name: "Sarah M.",
+    location: "United Kingdom",
+    quote: "The King's Court exceeded all my expectations. The service was impeccable and the rooms luxurious.",
+    rating: 5
+  }, {
+    id: 2,
+    name: "David L.",
+    location: "Australia",
+    quote: "Beautiful gardens, excellent food, and the most comfortable bed I've ever slept in. Will definitely return!",
+    rating: 5
+  }, {
+    id: 3,
+    name: "Maria J.",
+    location: "Germany",
+    quote: "A truly peaceful retreat with wonderful staff who made our stay special. The attention to detail was remarkable.",
+    rating: 5
+  }];
+  return <>
       {/* Page Header */}
       <div className="relative h-64 md:h-80 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117175828.jpg?k=fc25b50159d732bc2468b8603e5fb947e05d1c788d67294c320fb75e90bd3f3a&o=&hp=1" 
-            alt="About The King's Court" 
-            className="w-full h-full object-cover"
-          />
+          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117175828.jpg?k=fc25b50159d732bc2468b8603e5fb947e05d1c788d67294c320fb75e90bd3f3a&o=&hp=1" alt="About The King's Court" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-gradient"></div>
         </div>
         <div className="container mx-auto px-4 z-10 text-white text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-2 text-shadow">About Us</h1>
+          <h1 className="font-serif text-4xl mb-2 text-shadow font-extrabold md:text-[t#D4AF37] text-[#d4af37]">About Us</h1>
           <p className="text-xl max-w-3xl mx-auto text-shadow">Learn more about The King's Court Guest Manor and our story</p>
         </div>
       </div>
@@ -103,11 +86,7 @@ const AboutPage = () => {
               </div>
             </div>
             <div>
-              <img 
-                src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117174162.jpg?k=306f853bd5763956add54358df2126e07fcd3f192a1d24c53935d112e7519c7b&o=&hp=1" 
-                alt="The King's Court History" 
-                className="rounded-lg shadow-lg w-full h-auto"
-              />
+              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117174162.jpg?k=306f853bd5763956add54358df2126e07fcd3f192a1d24c53935d112e7519c7b&o=&hp=1" alt="The King's Court History" className="rounded-lg shadow-lg w-full h-auto" />
             </div>
           </div>
         </div>
@@ -126,15 +105,10 @@ const AboutPage = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="scroll-animation">
+            {team.map((member, index) => <div key={index} className="scroll-animation">
                 <Card className="overflow-hidden h-full">
                   <div className="h-64 overflow-hidden">
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
-                      className="w-full h-full object-cover"
-                    />
+                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                   </div>
                   <CardContent className="p-6">
                     <h3 className="font-serif text-xl font-medium mb-1">{member.name}</h3>
@@ -142,8 +116,7 @@ const AboutPage = () => {
                     <p className="text-gray-600">{member.bio}</p>
                   </CardContent>
                 </Card>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
@@ -160,33 +133,26 @@ const AboutPage = () => {
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Excellence",
-                description: "We strive for excellence in every aspect of our service and facilities."
-              },
-              {
-                title: "Personalization",
-                description: "We believe in tailoring experiences to meet each guest's unique needs."
-              },
-              {
-                title: "Sustainability",
-                description: "We are committed to sustainable practices that protect our environment."
-              },
-              {
-                title: "Community",
-                description: "We support our local community and promote local culture and products."
-              }
-            ].map((value, index) => (
-              <div key={index} className="scroll-animation">
+            {[{
+            title: "Excellence",
+            description: "We strive for excellence in every aspect of our service and facilities."
+          }, {
+            title: "Personalization",
+            description: "We believe in tailoring experiences to meet each guest's unique needs."
+          }, {
+            title: "Sustainability",
+            description: "We are committed to sustainable practices that protect our environment."
+          }, {
+            title: "Community",
+            description: "We support our local community and promote local culture and products."
+          }].map((value, index) => <div key={index} className="scroll-animation">
                 <Card className="h-full hover:shadow-md transition-shadow">
                   <CardContent className="p-6 text-center">
                     <h3 className="font-serif text-xl font-medium mb-3">{value.title}</h3>
                     <p className="text-gray-600">{value.description}</p>
                   </CardContent>
                 </Card>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
@@ -203,18 +169,11 @@ const AboutPage = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="scroll-animation">
+            {testimonials.map(testimonial => <div key={testimonial.id} className="scroll-animation">
                 <Card className="h-full">
                   <CardContent className="p-6 flex flex-col h-full">
                     <div className="flex mb-4">
-                      {Array(5).fill(0).map((_, i) => (
-                        <Star 
-                          key={i} 
-                          size={18} 
-                          className={i < testimonial.rating ? "text-manor-gold" : "text-gray-300"} 
-                        />
-                      ))}
+                      {Array(5).fill(0).map((_, i) => <Star key={i} size={18} className={i < testimonial.rating ? "text-manor-gold" : "text-gray-300"} />)}
                     </div>
                     <p className="italic text-gray-700 mb-6 flex-1">"{testimonial.quote}"</p>
                     <div className="flex items-center">
@@ -225,8 +184,7 @@ const AboutPage = () => {
                     </div>
                   </CardContent>
                 </Card>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
@@ -250,8 +208,6 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default AboutPage;
