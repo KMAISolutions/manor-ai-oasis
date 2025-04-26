@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,6 +6,7 @@ import { Bed, Users, Wifi, Check } from "lucide-react";
 
 const RoomsPage = () => {
   const [selectedTab, setSelectedTab] = useState("all");
+  const bookingUrl = "https://www.booking.com/hotel/za/the-king-39-s-court-guest-manor.en-gb.html";
   
   const rooms = [
     {
@@ -224,7 +224,7 @@ const RoomsPage = () => {
                     </div>
                     
                     <div className="flex space-x-2 mt-auto">
-                      <Button className="flex-1 bg-manor-green hover:bg-manor-green/90 text-white">
+                      <Button className="flex-1 bg-manor-green hover:bg-manor-green/90 text-white" onClick={() => window.open(bookingUrl, '_blank')}>
                         Book Now
                       </Button>
                       <Button variant="outline" className="flex-1 border-manor-green text-manor-green hover:bg-manor-green/10">
@@ -351,7 +351,7 @@ const RoomsPage = () => {
             Contact us directly for the best rates and special offers.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-manor-gold hover:bg-manor-gold/90 text-white px-8">
+            <Button size="lg" className="bg-manor-gold hover:bg-manor-gold/90 text-white px-8" onClick={() => window.open(bookingUrl, '_blank')}>
               Book Now
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8">

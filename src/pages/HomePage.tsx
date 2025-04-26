@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,6 +22,8 @@ const HomePage = () => {
     
     return () => observer.disconnect();
   }, []);
+
+  const bookingUrl = "https://www.booking.com/hotel/za/the-king-39-s-court-guest-manor.en-gb.html";
 
   const rooms = [
     {
@@ -92,11 +93,14 @@ const HomePage = () => {
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-4 text-shadow">Welcome to The King's Court</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-shadow">Experience luxury accommodation in the heart of South Africa</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-manor-gold hover:bg-manor-gold/90 text-white px-8 py-6 text-lg">
+            <Button size="lg" className="bg-manor-gold hover:bg-manor-gold/90 text-white px-8 py-6 text-lg" onClick={() => window.open(bookingUrl, '_blank')}>
               Book Your Stay
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
-              Discover More
+            <Button className="w-full bg-manor-green hover:bg-manor-green/90 text-white" onClick={() => window.open(bookingUrl, '_blank')}>
+              Book Now
+            </Button>
+            <Button size="lg" className="bg-manor-gold hover:bg-manor-gold/90 text-white px-8" onClick={() => window.open(bookingUrl, '_blank')}>
+              Book Now
             </Button>
           </div>
         </div>
