@@ -82,7 +82,7 @@ const HomePage = () => {
       <div className="relative h-screen min-h-[600px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117175828.jpg?k=fc25b50159d732bc2468b8603e5fb947e05d1c788d67294c320fb75e90bd3f3a&o=&hp=1" 
+            src="/lovable-uploads/5f6280d4-717d-40f9-81fd-9042a840789f.png" 
             alt="The King's Court Guest Manor" 
             className="w-full h-full object-cover"
           />
@@ -90,13 +90,25 @@ const HomePage = () => {
         </div>
         
         <div className="container mx-auto px-4 z-10 text-white text-center">
+          <img 
+            src="/lovable-uploads/3c307e3d-1c63-4d5e-9c4f-140675be7960.png"
+            alt="Kings Court Logo" 
+            className="w-48 mx-auto mb-6"
+          />
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-4 text-shadow">Welcome to The King's Court</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-shadow">Experience luxury accommodation in the heart of South Africa</p>
-          <Link to="/rooms">
-            <Button size="lg" className="bg-manor-gold hover:bg-manor-gold/90 text-white px-8 py-6 text-lg">
-              View Our Rooms
-            </Button>
-          </Link>
+          <div className="flex gap-4 justify-center">
+            <Link to="/rooms">
+              <Button size="lg" className="bg-[#D4AF37] hover:bg-[#D4AF37]/90 text-white px-8 py-6 text-lg">
+                View Our Rooms
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg">
+                Contact Us
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
       
@@ -125,7 +137,7 @@ const HomePage = () => {
       </div>
       
       {/* About Section */}
-      <div className="py-20 bg-manor-beige">
+      <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="scroll-animation">
@@ -136,7 +148,6 @@ const HomePage = () => {
               />
             </div>
             <div className="scroll-animation">
-              <h6 className="text-manor-gold font-medium mb-2">ABOUT US</h6>
               <h2 className="font-serif text-3xl md:text-4xl mb-6">A Luxurious Escape in South Africa</h2>
               <p className="mb-6 text-gray-700">
                 The King's Court Guest Manor offers a perfect blend of comfort, luxury, and warm hospitality. 
@@ -161,72 +172,59 @@ const HomePage = () => {
       <div className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h6 className="text-manor-gold font-medium mb-2">ACCOMMODATION</h6>
+            <h6 className="text-[#D4AF37] font-medium mb-2">ACCOMMODATION</h6>
             <h2 className="font-serif text-3xl md:text-4xl mb-4">Our Elegant Rooms</h2>
             <p className="max-w-2xl mx-auto text-gray-600">
-              Choose from our selection of beautifully appointed rooms and suites, 
-              each designed with your comfort in mind.
+              Comfortable Accommodation is what you get at The King's Court Guest Manor in Bela Bela, 
+              offering air-conditioned rooms with private bathrooms, baths, showers, and free toiletries. 
+              Each room includes a work desk, TV, electric kettle, and wardrobe. 
+              We have the option of the Deluxe King Suite and the Deluxe Double Room.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      {/* Facilities Section */}
+      <div className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h6 className="text-[#D4AF37] font-medium mb-2">OUR FACILITIES</h6>
+            <h2 className="font-serif text-3xl md:text-4xl mb-4">Amenities & Services</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
+              We offer a range of facilities and services to make your stay comfortable and memorable.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
-            {rooms.map((room, index) => (
-              <div key={room.id} className="scroll-animation room-card group">
-                <Card className="overflow-hidden h-full flex flex-col">
-                  <div className="relative overflow-hidden h-64">
-                    <img 
-                      src={room.image} 
-                      alt={room.title} 
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute top-4 right-4 bg-manor-gold text-white py-1 px-3 rounded-full">
-                      {room.price} / night
-                    </div>
-                  </div>
-                  <CardContent className="p-6 flex-1 flex flex-col">
-                    <h3 className="font-serif text-xl font-medium mb-2">{room.title}</h3>
-                    <p className="text-gray-600 mb-4">{room.description}</p>
-                    <ul className="space-y-2 mb-6 flex-1">
-                      {room.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm">
-                          <Star size={16} className="text-manor-gold mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link to="/rooms" className="mt-auto">
-                      <Button className="w-full bg-manor-green hover:bg-manor-green/90 text-white">
-                        View Details
-                      </Button>
-                    </Link>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {[
+              { icon: <Wifi size={28} />, title: "Free WiFi" },
+              { icon: <Users size={28} />, title: "Conference Facilities" },
+              { icon: <Calendar size={28} />, title: "Event Space" },
+              { icon: <Star size={28} />, title: "Swimming Pool" },
+              { icon: <Star size={28} />, title: "Restaurant" },
+              { icon: <Star size={28} />, title: "Daily Housekeeping" },
+              { icon: <Star size={28} />, title: "Garden Areas" },
+              { icon: <Star size={28} />, title: "Airport Transfers" }
+            ].map((item, index) => (
+              <div key={index} className="scroll-animation">
+                <Card className="h-full hover:shadow-md transition-shadow">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-manor-gold mb-4 flex justify-center">{item.icon}</div>
+                    <h3 className="font-medium">{item.title}</h3>
                   </CardContent>
                 </Card>
               </div>
             ))}
           </div>
-          
-          <div className="text-center mt-12">
-            <Link to="/rooms">
-              <Button variant="outline" className="border-manor-green text-manor-green hover:bg-manor-green/10">
-                View All Rooms
-              </Button>
-            </Link>
-          </div>
         </div>
       </div>
       
-      {/* CTA Section */}
-      <div className="py-20 bg-manor-green text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl mb-6">Experience Ultimate Luxury and Comfort</h2>
-          <p className="max-w-2xl mx-auto mb-8 text-gray-100">
-            Book your stay at The King's Court Guest Manor and enjoy exceptional service, 
-            beautiful surroundings, and a truly memorable experience.
-          </p>
-          <Button size="lg" className="bg-manor-gold hover:bg-manor-gold/90 text-white px-8">
-            Book Now
+      <div className="text-center mt-8">
+        <Link to="/facilities">
+          <Button variant="outline" className="border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10">
+            View More
           </Button>
-        </div>
+        </Link>
       </div>
       
       {/* Testimonials Section */}
@@ -261,41 +259,6 @@ const HomePage = () => {
                         <p className="text-sm text-gray-500">{testimonial.location}</p>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      
-      {/* Features Section */}
-      <div className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h6 className="text-manor-gold font-medium mb-2">OUR FACILITIES</h6>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">Amenities & Services</h2>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              We offer a range of facilities and services to make your stay comfortable and memorable.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {[
-              { icon: <Wifi size={28} />, title: "Free WiFi" },
-              { icon: <Users size={28} />, title: "Conference Facilities" },
-              { icon: <Calendar size={28} />, title: "Event Space" },
-              { icon: <Star size={28} />, title: "Swimming Pool" },
-              { icon: <Star size={28} />, title: "Restaurant" },
-              { icon: <Star size={28} />, title: "Daily Housekeeping" },
-              { icon: <Star size={28} />, title: "Garden Areas" },
-              { icon: <Star size={28} />, title: "Airport Transfers" }
-            ].map((item, index) => (
-              <div key={index} className="scroll-animation">
-                <Card className="h-full hover:shadow-md transition-shadow">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-manor-gold mb-4 flex justify-center">{item.icon}</div>
-                    <h3 className="font-medium">{item.title}</h3>
                   </CardContent>
                 </Card>
               </div>
