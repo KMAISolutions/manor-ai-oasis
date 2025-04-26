@@ -132,7 +132,7 @@ const HomePage = () => {
                 we ensure that every guest experiences the best of South African hospitality.
               </p>
               <Link to="/about">
-                <Button className="text-white bg-slate-900 hover:bg-slate-800 font-extrabold text-lg">
+                <Button className="text-white font-extrabold text-lg bg-slate-800 hover:bg-slate-700">
                   Learn More About Us
                 </Button>
               </Link>
