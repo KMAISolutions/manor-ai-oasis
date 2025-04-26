@@ -2,11 +2,9 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -15,20 +13,13 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
-    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 shadow-md py-2' : 'bg-transparent py-4'}`}>
-      <div className="container mx-auto px-4 flex justify-between items-center">
+  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 shadow-md py-2' : 'bg-transparent py-4'}`}>
+      <div className="container mx-auto px-4 flex justify-between items-center bg-slate-900">
         <Link to="/" className="flex items-center">
-          <img 
-            src="/lovable-uploads/3c307e3d-1c63-4d5e-9c4f-140675be7960.png"
-            alt="Kings Court Logo"
-            className="h-12 mr-2"
-          />
+          <img src="/lovable-uploads/3c307e3d-1c63-4d5e-9c4f-140675be7960.png" alt="Kings Court Logo" className="h-12 mr-2" />
         </Link>
         
         <div className="hidden md:flex items-center space-x-6">
@@ -49,11 +40,7 @@ const Navbar = () => {
       <div className={`fixed inset-0 bg-gray-900/95 z-50 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className="container mx-auto px-4 py-6">
           <div className="flex justify-between items-center mb-8">
-            <img 
-              src="/lovable-uploads/3c307e3d-1c63-4d5e-9c4f-140675be7960.png"
-              alt="Kings Court Logo"
-              className="h-12"
-            />
+            <img src="/lovable-uploads/3c307e3d-1c63-4d5e-9c4f-140675be7960.png" alt="Kings Court Logo" className="h-12" />
             <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="text-white">
               <X size={24} />
             </Button>
@@ -73,8 +60,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navbar;
