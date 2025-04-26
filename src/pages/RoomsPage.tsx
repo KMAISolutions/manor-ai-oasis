@@ -85,7 +85,7 @@ const RoomsPage = () => {
           <TabsContent value="double-room">
             <Card>
               <CardContent className="grid md:grid-cols-2 gap-8 p-6 bg-slate-900">
-                <div className="relative h-[400px] overflow-hidden rounded-lg">
+                <div className="relative h-[400px] overflow-hidden rounded-lg text-[[#D4AF37] text-[#d4af37]">
                   <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117175723.jpg?k=f40dc9c0aa40beb8dca45e0e894e05a6cb960963e7acf9a8c15f2019e22c2775&o=&hp=1" alt="Deluxe Double Room" className="w-full h-full object-cover" />
                 </div>
                 <div className="space-y-6">
