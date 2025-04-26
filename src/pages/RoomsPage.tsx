@@ -90,7 +90,7 @@ const RoomsPage = () => {
                 </div>
                 <div className="space-y-6">
                   <div>
-                    <h2 className="font-serif text-2xl mb-2">Deluxe Double Room</h2>
+                    <h2 className="font-serif mb-2 text-[#d4af37] text-4xl font-extrabold">Deluxe Double Room</h2>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-600">
                       <span>40 m²</span>
                       <span>View</span>
@@ -99,21 +99,21 @@ const RoomsPage = () => {
                   </div>
 
                   <div>
-                    <h3 className="font-medium mb-2">Bed:</h3>
+                    <h3 className="mb-2 text-[#d4af37] text-lg font-semibold">Bed:</h3>
                     <div className="flex items-center gap-2 text-sm">
                       <Bed size={16} /> 1 double bed
                     </div>
                   </div>
 
                   <div>
-                    <h3 className="font-medium mb-2">Bathroom:</h3>
+                    <h3 className="mb-2 font-semibold text-[#d4af37] text-lg">Bathroom:</h3>
                     {["Free toiletries", "Toilet", "Bath or shower", "Towels", "Toilet paper"].map((item, idx) => <div key={idx} className="flex items-center gap-2 text-sm">
                         <Check size={16} className="text-manor-gold" /> {item}
                       </div>)}
                   </div>
 
                   <div>
-                    <h3 className="font-medium mb-2">Facilities:</h3>
+                    <h3 className="mb-2 font-semibold text-lg text-[#d4af37]">Facilities:</h3>
                     <div className="grid grid-cols-2 gap-2">
                       {["Air conditioning", "TV", "Flat-screen TV", "Electric kettle", "Wardrobe or closet"].map((facility, idx) => <div key={idx} className="flex items-center gap-2 text-sm">
                           <Check size={16} className="text-manor-gold" /> {facility}
@@ -121,7 +121,7 @@ const RoomsPage = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full bg-manor-gold hover:bg-manor-gold/90 text-white" onClick={() => window.open(bookingUrl, '_blank')}>
+                  <Button onClick={() => window.open(bookingUrl, '_blank')} className="w-full text-white bg-slate-900 hover:bg-slate-800 text-lg font-extrabold">
                     Book Now
                   </Button>
                 </div>
