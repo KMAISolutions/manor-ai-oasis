@@ -72,7 +72,7 @@ const HomePage = () => {
         
         <div className="container mx-auto px-4 z-10 text-white text-center">
           <img alt="Kings Court Logo" src="/lovable-uploads/a59c40a4-3ed0-460b-b037-903a2cc0ba5e.jpg" className="w-48 mx-auto mb-6 object-fill" />
-          <h1 className="font-serif text-4xl font-bold mb-4 text-shadow md:text-[[#D4AF37]] text-[#d4af37]">Welcome to The King's Court</h1>
+          <h1 className="font-serif text-4xl mb-4 text-shadow text-[#d4af37] font-bold md:text-6xl">Welcome to The King's Court</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-shadow">Experience luxury accommodation in the heart of South Africa</p>
           <div className="flex gap-4 justify-center">
             <Link to="/rooms">
