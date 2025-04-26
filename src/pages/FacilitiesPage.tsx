@@ -2,7 +2,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent } from "@/components/ui/card";
-import { Bath, BedDouble, Shower, Tv, WifiIcon } from "lucide-react";
+import { Bath, BedDouble, Tv, WifiIcon } from "lucide-react";
 import GuestReviews from "@/components/facilities/GuestReviews";
 import PopularFacilities from "@/components/facilities/PopularFacilities";
 import PropertyRules from "@/components/facilities/PropertyRules";
