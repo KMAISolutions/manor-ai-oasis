@@ -14,14 +14,14 @@ const RoomsPage = () => {
           <div className="absolute inset-0 hero-gradient"></div>
         </div>
         <div className="container mx-auto px-4 z-10 text-white text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold mb-2 text-shadow">Our Rooms</h1>
-          <p className="text-xl max-w-3xl mx-auto text-shadow">Experience luxury in our elegantly appointed rooms</p>
+          <h1 className="font-serif text-4xl font-bold mb-2 text-shadow text-[#d4af37] md:text-6xl">Our Rooms</h1>
+          <p className="max-w-3xl mx-auto text-shadow font-semibold text-3xl">Experience luxury in our elegantly appointed rooms</p>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <p className="text-gray-600">
+          <p className="text-black">
             Comfortable Accommodation is what you get at The King's Court Guest Manor in Bela Bela, 
             offering air-conditioned rooms with private bathrooms, baths, showers, and free toiletries. 
             Each room includes a work desk, TV, electric kettle, and wardrobe. 
@@ -31,19 +31,19 @@ const RoomsPage = () => {
 
         <Tabs defaultValue="king-suite" className="max-w-6xl mx-auto bg-cyan-50">
           <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="king-suite">Deluxe King Suite</TabsTrigger>
-            <TabsTrigger value="double-room">Deluxe Double Room</TabsTrigger>
+            <TabsTrigger value="king-suite" className="bg-slate-900 hover:bg-slate-800 text-white mx-[16px]">Deluxe King Suite</TabsTrigger>
+            <TabsTrigger value="double-room" className="bg-slate-900 hover:bg-slate-800 text-white mx-[16px]">Deluxe Double Room</TabsTrigger>
           </TabsList>
 
           <TabsContent value="king-suite" className="text-[#d4af37] font-extrabold text-4xl">
             <Card>
               <CardContent className="grid md:grid-cols-2 gap-8 p-6">
                 <div className="relative h-[400px] overflow-hidden rounded-lg">
-                  <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117177319.jpg?k=87c6a02ca9a3be5859e626bb2998483f5e66e16c3ebd6f0d56be30296940d3c5&o=&hp=1" alt="Deluxe King Suite" className="w-full h-full object-cover" />
+                  <img alt="Deluxe King Suite" className="w-full h-full object-cover" src="/lovable-uploads/b00e21c3-7777-4677-b5fd-a12561f53b41.jpg" />
                 </div>
                 <div className="space-y-6">
                   <div>
-                    <h2 className="font-serif text-2xl mb-2">Deluxe King Suite</h2>
+                    <h2 className="font-serif mb-2 text-[#d4af37] text-4xl">Deluxe King Suite</h2>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-600">
                       <span>68 m²</span>
                       <span>Pool view</span>
@@ -52,21 +52,21 @@ const RoomsPage = () => {
                   </div>
 
                   <div>
-                    <h3 className="font-medium mb-2">Bedrooms:</h3>
+                    <h3 className="font-medium mb-2 text-[#d4af37]">Bedrooms:</h3>
                     {[...Array(6)].map((_, idx) => <div key={idx} className="flex items-center gap-2 text-sm">
                         <Bed size={16} /> Bedroom {idx + 1}: 1 large double bed
                       </div>)}
                   </div>
 
                   <div>
-                    <h3 className="font-medium mb-2">Bathroom:</h3>
+                    <h3 className="font-medium mb-2 text-[#d4af37]">Bathroom:</h3>
                     {["Free toiletries", "Toilet", "Bath or shower", "Towels", "Toilet paper"].map((item, idx) => <div key={idx} className="flex items-center gap-2 text-sm">
                         <Check size={16} className="text-manor-gold" /> {item}
                       </div>)}
                   </div>
 
                   <div>
-                    <h3 className="font-medium mb-2">Facilities:</h3>
+                    <h3 className="font-medium mb-2 text-[#d4af37]">Facilities:</h3>
                     <div className="grid grid-cols-2 gap-2">
                       {["Air conditioning", "TV", "Flat-screen TV", "Electric kettle", "Wardrobe or closet"].map((facility, idx) => <div key={idx} className="flex items-center gap-2 text-sm">
                           <Check size={16} className="text-manor-gold" /> {facility}
@@ -74,7 +74,7 @@ const RoomsPage = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full bg-manor-gold hover:bg-manor-gold/90 text-white" onClick={() => window.open(bookingUrl, '_blank')}>
+                  <Button onClick={() => window.open(bookingUrl, '_blank')} className="w-full text-white bg-slate-900 hover:bg-slate-800 font-extrabold text-lg py-0 px-[3px] my-0 mx-[70px]">
                     Book Now
                   </Button>
                 </div>
@@ -86,7 +86,7 @@ const RoomsPage = () => {
             <Card>
               <CardContent className="grid md:grid-cols-2 gap-8 p-6">
                 <div className="relative h-[400px] overflow-hidden rounded-lg">
-                  <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117175723.jpg?k=f40dc9c0aa40beb8dca45e0e894e05a6cb960963e7acf9a8c15f2019e22c2775&o=&hp=1" alt="Deluxe Double Room" className="w-full h-full object-cover" />
+                  <img alt="Deluxe Double Room" className="w-full h-full object-cover" src="/lovable-uploads/b6895fc9-055d-4d0a-95d5-1c34f9064797.jpg" />
                 </div>
                 <div className="space-y-6">
                   <div>
