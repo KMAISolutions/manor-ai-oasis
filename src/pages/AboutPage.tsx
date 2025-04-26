@@ -46,8 +46,8 @@ const AboutPage = () => {
           <div className="absolute inset-0 hero-gradient"></div>
         </div>
         <div className="container mx-auto px-4 z-10 text-white text-center">
-          <h1 className="font-serif text-4xl mb-2 text-shadow font-extrabold md:text-[t#D4AF37] text-[#d4af37]">About Us</h1>
-          <p className="text-xl max-w-3xl mx-auto text-shadow">Learn more about The King's Court Guest Manor and our story</p>
+          <h1 className="font-serif text-4xl mb-2 text-shadow font-extrabold text-[#d4af37] md:text-6xl">About Us</h1>
+          <p className="text-xl max-w-3xl mx-auto text-shadow">Learn more about The King's Court Guest Manor &amp; our story</p>
         </div>
       </div>
       
@@ -56,55 +56,55 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h6 className="text-manor-gold font-medium mb-2">OUR STORY</h6>
-              <h2 className="font-serif text-3xl md:text-4xl mb-6">The King's Court Legacy</h2>
-              <p className="mb-4 text-gray-700">
+              <h6 className="mb-2 text-[#d4af37] text-5xl font-extrabold text-center">OUR STORY</h6>
+              <h2 className="font-serif text-3xl mb-6 md:text-3xl text-center font-semibold">The King's Court Legacy</h2>
+              <p className="mb-4 text-black text-center">
                 Established in 1998, The King's Court Guest Manor began as a vision to create a luxury retreat 
                 that showcases the best of South African hospitality. Our historic property, once the residence 
                 of a prominent local family, has been carefully restored and transformed into the elegant 
                 guest manor you see today.
               </p>
-              <p className="mb-4 text-gray-700">
+              <p className="mb-4 text-black text-center">
                 Over the years, we have welcomed guests from around the world, providing them with 
                 exceptional service and creating memorable experiences. Our commitment to excellence has 
                 earned us numerous awards and recognition in the hospitality industry.
               </p>
-              <p className="mb-6 text-gray-700">
+              <p className="mb-6 text-black text-center">
                 Today, The King's Court continues to uphold its tradition of luxury and warm hospitality, 
                 while embracing modern amenities and sustainable practices to ensure a comfortable stay 
                 for our guests and a positive impact on our community.
               </p>
               <div className="flex gap-4">
-                <Button className="bg-manor-green hover:bg-manor-green/90 text-white">
+                <Button className="text-white bg-slate-900 hover:bg-slate-800 text-lg font-extrabold">
                   Book Your Stay
                 </Button>
                 <Link to="/contact">
-                  <Button variant="outline" className="border-manor-green text-manor-green hover:bg-manor-green/10">
+                  <Button variant="outline" className="border-manor-green text-white bg-slate-900 hover:bg-slate-800 text-lg font-extrabold">
                     Contact Us
                   </Button>
                 </Link>
               </div>
             </div>
             <div>
-              <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117174162.jpg?k=306f853bd5763956add54358df2126e07fcd3f192a1d24c53935d112e7519c7b&o=&hp=1" alt="The King's Court History" className="rounded-lg shadow-lg w-full h-auto" />
+              <img alt="The King's Court History" className="rounded-lg shadow-lg w-full h-auto" src="/lovable-uploads/3b8f9497-2ed6-4756-9785-38c1f39bbfc1.jpg" />
             </div>
           </div>
         </div>
       </div>
       
       {/* Meet the Team */}
-      <div className="py-20 bg-manor-beige">
+      <div className="py-20 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h6 className="text-manor-gold font-medium mb-2">OUR TEAM</h6>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">Meet Our Team</h2>
-            <p className="max-w-2xl mx-auto text-gray-600">
+            <h6 className="font-medium mb-2 text-gray-950">OUR TEAM</h6>
+            <h2 className="font-serif text-3xl md:text-4xl mb-4 text-gray-950">Meet Our Team</h2>
+            <p className="max-w-2xl mx-auto text-gray-950">
               Our dedicated team works tirelessly to ensure your stay at The King's Court 
               is comfortable, enjoyable, and memorable.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 bg-slate-950">
             {team.map((member, index) => <div key={index} className="scroll-animation">
                 <Card className="overflow-hidden h-full">
                   <div className="h-64 overflow-hidden">
@@ -122,12 +122,12 @@ const AboutPage = () => {
       </div>
       
       {/* Values */}
-      <div className="py-20">
+      <div className="py-20 bg-slate-950">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h6 className="text-manor-gold font-medium mb-2">OUR VALUES</h6>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">What We Stand For</h2>
-            <p className="max-w-2xl mx-auto text-gray-600">
+            <h6 className="font-medium mb-2 text-gray-950">OUR VALUES</h6>
+            <h2 className="font-serif text-3xl md:text-4xl mb-4 text-zinc-950">What We Stand For</h2>
+            <p className="max-w-2xl mx-auto text-zinc-950">
               Our core values guide everything we do at The King's Court Guest Manor.
             </p>
           </div>
@@ -158,8 +158,8 @@ const AboutPage = () => {
       </div>
       
       {/* Testimonials */}
-      <div className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <div className="py-20 bg-slate-200">
+        <div className="container mx-auto px-4 bg-slate-200">
           <div className="text-center mb-12">
             <h6 className="text-manor-gold font-medium mb-2">TESTIMONIALS</h6>
             <h2 className="font-serif text-3xl md:text-4xl mb-4">Guest Experiences</h2>
@@ -190,18 +190,18 @@ const AboutPage = () => {
       </div>
       
       {/* CTA Section */}
-      <div className="py-20 bg-manor-green text-white">
+      <div className="text-white bg-slate-900 py-[34px]">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl mb-6">Ready to Experience The King's Court?</h2>
+          <h2 className="font-serif text-3xl mb-6 text-[#d4af37] md:text-4xl">Ready to Experience The King's Court?</h2>
           <p className="max-w-2xl mx-auto mb-8 text-gray-100">
             Book your stay today and discover why our guests keep coming back.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-manor-gold hover:bg-manor-gold/90 text-white px-8">
+            <Button size="lg" className="text-white px-8 bg-slate-600 hover:bg-slate-500 text-lg font-extrabold">
               Book Now
             </Button>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8">
+              <Button size="lg" variant="outline" className="border-white text-white px-8 bg-slate-600 hover:bg-slate-500 text-lg font-extrabold">
                 Contact Us
               </Button>
             </Link>
