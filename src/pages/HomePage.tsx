@@ -81,7 +81,7 @@ const HomePage = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white px-8 py-6 text-lg font-extrabold text-zinc-50 bg-slate-900 hover:bg-slate-800">
+              <Button size="lg" variant="outline" className="border-white text-lg font-extrabold bg-slate-900 hover:bg-slate-800 py-[24px] px-[33px] text-white">
                 Contact Us
               </Button>
             </Link>
