@@ -207,7 +207,7 @@ const HomePage = () => {
       
       <div className="text-center mt-8">
         <Link to="/facilities">
-          <Button variant="outline" className="border-[#D4AF37] text-white text-lg font-extrabold bg-slate-900 hover:bg-slate-800">
+          <Button variant="outline" className="border-[#D4AF37] text-white text-lg font-extrabold bg-slate-900 hover:bg-slate-800 my-[18px] py-0 mx-0">
             View More
           </Button>
         </Link>
