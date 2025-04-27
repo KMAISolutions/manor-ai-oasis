@@ -62,103 +62,107 @@ const ContactPage = () => {
       {/* Contact Info & Form Section */}
       <div className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="flex flex-col justify-center">
-              <h2 className="font-serif text-3xl mb-6 font-extrabold text-center text-[#d4af37]">Get in Touch</h2>
-              <p className="mb-8 text-black text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="font-serif text-3xl mb-6 font-extrabold text-[#d4af37]">Get in Touch</h2>
+              <p className="mb-8 text-black">
                 Whether you have a question about our accommodations, want to make a reservation, 
                 or need assistance with planning your visit, our friendly staff is here to help.
               </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Contact Information */}
+              <div className="flex flex-col justify-center">
+                <div className="space-y-6">
+                  <Card>
+                    <CardContent className="p-6 flex items-start">
+                      <div className="bg-slate-900 text-white p-3 rounded-full mr-4">
+                        <Phone size={24} />
+                      </div>
+                      <div>
+                        <h3 className="font-serif mb-2 text-[#d4af37] font-normal text-2xl">Phone</h3>
+                        <p className="text-gray-600">072 814 5439</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card>
+                    <CardContent className="p-6 flex items-start">
+                      <div className="bg-slate-900 text-white p-3 rounded-full mr-4">
+                        <Mail size={24} />
+                      </div>
+                      <div>
+                        <h3 className="font-serif mb-2 text-2xl font-extrabold text-[#d4af37]">Email</h3>
+                        <p className="text-gray-600">info@kingscourt.co.za</p>
+                        <p className="text-gray-600">reservations@kingscourt.co.za</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card>
+                    <CardContent className="p-6 flex items-start">
+                      <div className="bg-slate-900 text-white p-3 rounded-full mr-4">
+                        <MapPin size={24} />
+                      </div>
+                      <div>
+                        <h3 className="font-serif mb-2 text-2xl text-[#d4af37] font-extrabold">Address</h3>
+                        <p className="text-gray-600">
+                          70 Van Der Merwe Street<br />
+                          Bela Bela, 0480<br />
+                          Bela-Bela, South Africa
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
               
-              <div className="space-y-6">
-                <Card>
-                  <CardContent className="p-6 flex items-start">
-                    <div className="bg-slate-900 text-white p-3 rounded-full mr-4">
-                      <Phone size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-serif mb-2 text-[#d4af37] font-normal text-2xl">Phone</h3>
-                      <p className="text-gray-600">072 814 5439</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card>
-                  <CardContent className="p-6 flex items-start">
-                    <div className="bg-slate-900 text-white p-3 rounded-full mr-4">
-                      <Mail size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-serif mb-2 text-2xl font-extrabold text-[#d4af37]">Email</h3>
-                      <p className="text-gray-600">info@kingscourt.co.za</p>
-                      <p className="text-gray-600">reservations@kingscourt.co.za</p>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card>
-                  <CardContent className="p-6 flex items-start">
-                    <div className="bg-slate-900 text-white p-3 rounded-full mr-4">
-                      <MapPin size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-serif mb-2 text-2xl text-[#d4af37] font-extrabold">Address</h3>
-                      <p className="text-gray-600">
-                        70 Van Der Merwe Street<br />
-                        Bela Bela, 0480<br />
-                        Bela-Bela, South Africa
-                      </p>
-                    </div>
+              {/* Contact Form */}
+              <div className="scroll-animation">
+                <Card className="overflow-hidden">
+                  <div className="bg-manor-green p-6 text-white">
+                    <h2 className="font-serif text-2xl">Send Us a Message</h2>
+                    <p className="text-gray-100">We'll get back to you as soon as possible</p>
+                  </div>
+                  <CardContent className="p-6">
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="name">Your Name</Label>
+                          <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" required />
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <Label htmlFor="email">Email Address</Label>
+                          <Input id="email" name="email" value={formData.email} onChange={handleChange} type="email" placeholder="john@example.com" required />
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <Label htmlFor="phone">Phone Number</Label>
+                          <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="+27 12 345 6789" />
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <Label htmlFor="subject">Subject</Label>
+                          <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Booking Inquiry" required />
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-2">
+                        <Label htmlFor="message">Your Message</Label>
+                        <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="How can we help you?" rows={5} required />
+                      </div>
+                      
+                      <Button className="w-full bg-manor-green hover:bg-manor-green/90 text-white">
+                        Send Message
+                      </Button>
+                    </form>
                   </CardContent>
                 </Card>
               </div>
-            </div>
-            
-            {/* Contact Form */}
-            <div className="scroll-animation">
-              <Card className="overflow-hidden">
-                <div className="bg-manor-green p-6 text-white">
-                  <h2 className="font-serif text-2xl">Send Us a Message</h2>
-                  <p className="text-gray-100">We'll get back to you as soon as possible</p>
-                </div>
-                <CardContent className="p-6">
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Your Name</Label>
-                        <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" required />
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email Address</Label>
-                        <Input id="email" name="email" value={formData.email} onChange={handleChange} type="email" placeholder="john@example.com" required />
-                      </div>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Phone Number</Label>
-                        <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="+27 12 345 6789" />
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <Label htmlFor="subject">Subject</Label>
-                        <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} placeholder="Booking Inquiry" required />
-                      </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Your Message</Label>
-                      <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="How can we help you?" rows={5} required />
-                    </div>
-                    
-                    <Button className="w-full bg-manor-green hover:bg-manor-green/90 text-white">
-                      Send Message
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
@@ -187,38 +191,10 @@ const ContactPage = () => {
         </div>
       </div>
       
-      {/* FAQ Section */}
-      <div className="py-16 bg-slate-950">
+      {/* Container before footer */}
+      <div className="w-full py-8 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl mb-4">Frequently Asked Questions</h2>
-            <p className="max-w-2xl mx-auto text-gray-600">
-              Find quick answers to common questions about The King's Court Guest Manor.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {[{
-            question: "What are your check-in and check-out times?",
-            answer: "Check-in is at 2:00 PM and check-out is at 11:00 AM. Early check-in and late check-out may be available upon request, subject to availability."
-          }, {
-            question: "Is breakfast included in the room rate?",
-            answer: "Yes, a complimentary full breakfast buffet is included in all room rates. Breakfast is served from 6:30 AM to 10:30 AM daily."
-          }, {
-            question: "Do you offer airport transfers?",
-            answer: "Yes, we can arrange airport transfers for an additional fee. Please contact us in advance with your flight details to arrange this service."
-          }, {
-            question: "Is there parking available at the guest manor?",
-            answer: "Yes, we offer free secure parking for all guests staying at The King's Court Guest Manor."
-          }].map((faq, index) => <div key={index} className="scroll-animation">
-                <Card className="h-full">
-                  <CardContent className="p-6">
-                    <h3 className="font-medium text-lg mb-2">{faq.question}</h3>
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </CardContent>
-                </Card>
-              </div>)}
-          </div>
+          <div className="border-t border-gray-200"></div>
         </div>
       </div>
     </>

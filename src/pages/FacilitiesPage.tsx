@@ -1,13 +1,15 @@
+
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent } from "@/components/ui/card";
 import { Bath, BedDouble, Tv, WifiIcon } from "lucide-react";
-import GuestReviews from "@/components/facilities/GuestReviews";
 import PopularFacilities from "@/components/facilities/PopularFacilities";
 import PropertyRules from "@/components/facilities/PropertyRules";
 import PropertyFAQ from "@/components/facilities/PropertyFAQ";
+
 const FacilitiesPage = () => {
-  return <div className="min-h-screen">
+  return (
+    <div className="min-h-screen">
       {/* Header Section */}
       <div className="relative h-64 md:h-80 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
@@ -21,11 +23,17 @@ const FacilitiesPage = () => {
       </div>
 
       <div className="container mx-auto px-4 py-12 bg-slate-200">
-        <GuestReviews />
         <PopularFacilities />
         <PropertyRules />
         <PropertyFAQ />
+        
+        {/* Container before footer */}
+        <div className="w-full py-8">
+          <div className="border-t border-gray-200"></div>
+        </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default FacilitiesPage;

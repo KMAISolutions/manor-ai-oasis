@@ -138,6 +138,13 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Container before footer */}
+      <div className="w-full py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="border-t border-gray-200"></div>
+        </div>
+      </div>
     </>
   );
 };
