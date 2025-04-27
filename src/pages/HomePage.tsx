@@ -152,8 +152,8 @@ const HomePage = () => {
       <div className="py-[16px] bg-slate-200">
         <div className="container mx-auto px-[15px] py-0">
           <div className="text-center mb-12">
-            <h6 className="text-[#D4AF37] mb-2 text-5xl font-bold">OUR FACILITIES</h6>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">Amenities & Services</h2>
+            <h6 className="text-[#D4AF37] mb-2 text-3xl font-extrabold">OUR FACILITIES</h6>
+            <h2 className="font-serif text-3xl mb-4 md:text-2xl font-semibold">Amenities & Services</h2>
             <p className="max-w-2xl mx-auto text-black">
               We offer a range of facilities and services to make your stay comfortable and memorable.
             </p>
@@ -208,9 +208,9 @@ const HomePage = () => {
       <div className="py-[28px] bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h6 className="font-medium mb-2 text-[#d4af37] text-5xl">OUR TESTIMONIALS</h6>
-            <h2 className="font-serif text-3xl mb-4 text-[#d4af37] md:text-4xl">What Our Guests Say</h2>
-            <p className="max-w-2xl mx-auto text-white">
+            <h6 className="mb-2 text-[#d4af37] text-3xl font-extrabold">OUR TESTIMONIALS</h6>
+            <h2 className="font-serif text-3xl mb-4 text-[#d4af37] md:text-2xl">What Our Guests Say</h2>
+            <p className="max-w-2xl mx-auto text-white text-lg">
               Read about the experiences of guests who have stayed at The King's Court Guest Manor.
             </p>
           </div>
