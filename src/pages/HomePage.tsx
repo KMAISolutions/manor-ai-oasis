@@ -73,7 +73,7 @@ const HomePage = () => {
         <div className="container mx-auto px-4 z-10 text-white text-center">
           <img alt="Kings Court Logo" src="/lovable-uploads/a59c40a4-3ed0-460b-b037-903a2cc0ba5e.jpg" className="w-48 mx-auto mb-6 object-fill" />
           <h1 className="font-serif text-4xl font-bold mb-4 text-shadow text-[#d4af37] md:text-6xl">Welcome to The King's Court</h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-shadow">Experience luxury accommodation in the heart of South Africa</p>
+          <p className="text-xl mb-8 max-w-3xl mx-auto text-shadow font-semibold md:text-3xl">Experience luxury accommodation in the heart of South Africa</p>
           <div className="flex gap-4 justify-center">
             <Link to="/rooms">
               <Button size="lg" className="text-white px-8 py-6 font-extrabold text-lg bg-slate-900 hover:bg-slate-800">
