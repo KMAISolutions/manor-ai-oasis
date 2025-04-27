@@ -47,7 +47,7 @@ const AboutPage = () => {
         </div>
         <div className="container mx-auto px-4 z-10 text-white text-center">
           <h1 className="font-serif text-4xl mb-2 text-shadow text-[#d4af37] font-extrabold md:text-6xl">About Us</h1>
-          <p className="text-xl max-w-3xl mx-auto text-shadow">Learn more about The King's Court Guest Manor and our story</p>
+          <p className="max-w-3xl mx-auto text-shadow font-semibold text-3xl">Learn more about The King's Court Guest Manor and our story</p>
         </div>
       </div>
       
@@ -192,7 +192,7 @@ const AboutPage = () => {
       {/* CTA Section */}
       <div className="py-20 text-white bg-slate-900">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-serif text-3xl mb-6 text-[#d4af37] md:text-5xl">Ready to Experience The King's Court?</h2>
+          <h2 className="font-serif text-3xl mb-6 text-[#d4af37] font-extrabold md:text-5xl">Ready to Experience The King's Court?</h2>
           <p className="max-w-2xl mx-auto mb-8 text-gray-100 font-semibold text-lg">
             Book your stay today and discover why our guests keep coming back.
           </p>
