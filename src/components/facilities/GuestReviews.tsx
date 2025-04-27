@@ -32,7 +32,7 @@ const testimonials = [{
 const GuestReviews = () => {
   return <div className="mb-16">
       <div className="text-center mb-12">
-        <h2 className="font-serif mb-4 text-[s#D4AF37] text-[#d4af37]">Guest Reviews</h2>
+        <h2 className="font-serif mb-4 text-[#d4af37] text-3xl font-bold">Our Guest Reviews</h2>
         <div className="text-2xl font-bold text-manor-green mb-2 bg-slate-200">8.68</div>
         <div className="text-lg mb-8">Fabulous · 292 real reviews</div>
       </div>
