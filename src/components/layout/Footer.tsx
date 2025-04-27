@@ -60,8 +60,8 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 text-sm">
-          <p className="text-black">&copy; {new Date().getFullYear()} The King's Court Guest Manor. All Rights Reserved.</p>
-          <p className="mt-2 text-[[#D4AF37] text-black">Powered By: Kwena Moloto A.I Solutions</p>
+          <p className="text-white">&copy; {new Date().getFullYear()} The King's Court Guest Manor. All Rights Reserved.</p>
+          <p className="mt-2 text-[[#D4AF37] text-white">Powered By: Kwena Moloto A.I Solutions</p>
         </div>
       </div>
     </footer>;
