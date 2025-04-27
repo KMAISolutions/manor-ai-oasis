@@ -32,15 +32,15 @@ const testimonials = [{
 const GuestReviews = () => {
   return <div className="mb-16">
       <div className="text-center mb-12">
-        <h2 className="font-serif text-3xl mb-4 text-slate-200">Guest Reviews</h2>
+        <h2 className="font-serif mb-4 text-[s#D4AF37] text-[#d4af37]">Guest Reviews</h2>
         <div className="text-2xl font-bold text-manor-green mb-2 bg-slate-200">8.68</div>
         <div className="text-lg mb-8">Fabulous · 292 real reviews</div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <div className="space-y-6 bg-gray-950">
+        <div className="space-y-6 bg-slate-200">
           {reviews.map(review => <div key={review.category} className="bg-slate-950">
-              <div className="flex justify-between mb-2">
+              <div className="flex justify-between mb-2 bg-slate-200">
                 <span>{review.category}</span>
                 <span className="font-bold">{review.score}</span>
               </div>
@@ -48,7 +48,7 @@ const GuestReviews = () => {
             </div>)}
         </div>
 
-        <div className="space-y-6 bg-slate-950">
+        <div className="space-y-6 bg-slate-200">
           {testimonials.map((testimonial, index) => <Card key={index}>
               <CardContent className="p-6">
                 <p className="italic mb-4">"{testimonial.quote}"</p>
