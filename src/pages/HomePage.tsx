@@ -62,12 +62,12 @@ const HomePage = () => {
           <p className="text-xl mb-8 max-w-3xl mx-auto text-shadow font-semibold md:text-3xl">Experience luxury accommodation in the heart of South Africa</p>
           <div className="flex gap-4 justify-center">
             <Link to="/rooms">
-              <Button size="lg" className="text-white px-8 py-6 font-extrabold text-lg bg-slate-900 hover:bg-slate-800">
+              <Button size="lg" className="text-white font-extrabold text-lg bg-slate-900 hover:bg-slate-800 px-[4px] py-[25px]">
                 View Our Rooms
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-lg font-extrabold bg-slate-900 hover:bg-slate-800 py-[24px] px-[33px] text-white">
+              <Button size="lg" variant="outline" className="border-white text-lg font-extrabold bg-slate-900 hover:bg-slate-800 text-white px-[3px] py-[22px]">
                 Contact Us
               </Button>
             </Link>
@@ -131,8 +131,8 @@ const HomePage = () => {
       <div className="bg-slate-200 py-[35px] px-0 mx-0 my-0 rounded-md">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h6 className="text-[#D4AF37] mb-2 text-5xl font-bold">ACCOMMODATION</h6>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">Our Elegant Rooms</h2>
+            <h6 className="text-[#D4AF37] mb-2 font-bold text-3xl">ACCOMMODATION</h6>
+            <h2 className="font-serif text-3xl mb-4 md:text-2xl font-semibold">Our Elegant Rooms</h2>
             <p className="max-w-2xl mx-auto text-black mb-8">
               Comfortable Accommodation is what you get at The King's Court Guest Manor in Bela Bela, 
               offering air-conditioned rooms with private bathrooms, baths, showers, and free toiletries. 
