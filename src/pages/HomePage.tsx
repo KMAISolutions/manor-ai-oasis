@@ -1,17 +1,9 @@
-
 import { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Bed, Wifi, Star, Calendar, MapPin, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 const HomePage = () => {
   const animatedElements = useRef<HTMLElement[]>([]);
   useEffect(() => {
@@ -29,50 +21,37 @@ const HomePage = () => {
     });
     return () => observer.disconnect();
   }, []);
-
-  const slides = [
-    "/lovable-uploads/7a013118-6f29-478f-bea7-b79c84c50797.png",
-    "/lovable-uploads/5f6280d4-717d-40f9-81fd-9042a840789f.png",
-    "/lovable-uploads/5498925a-a717-429c-9c26-fb11adf7cc41.jpg"
-  ];
-  
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      location: "Pretoria",
-      quote: "The rooms were immaculate and the staff went above and beyond to make our stay special.",
-      rating: 5
-    },
-    {
-      id: 2,
-      name: "Michael Thompson",
-      location: "Cape Town",
-      quote: "A perfect blend of luxury and comfort. The pool area was a highlight for our family.",
-      rating: 5
-    },
-    {
-      id: 3,
-      name: "Thabo Mbeki",
-      location: "Johannesburg",
-      quote: "Excellent location and outstanding service. I'll definitely be returning.",
-      rating: 4
-    }
-  ];
-
+  const slides = ["/lovable-uploads/7a013118-6f29-478f-bea7-b79c84c50797.png", "/lovable-uploads/5f6280d4-717d-40f9-81fd-9042a840789f.png", "/lovable-uploads/5498925a-a717-429c-9c26-fb11adf7cc41.jpg"];
+  const testimonials = [{
+    id: 1,
+    name: "Sarah Johnson",
+    location: "Pretoria",
+    quote: "The rooms were immaculate and the staff went above and beyond to make our stay special.",
+    rating: 5
+  }, {
+    id: 2,
+    name: "Michael Thompson",
+    location: "Cape Town",
+    quote: "A perfect blend of luxury and comfort. The pool area was a highlight for our family.",
+    rating: 5
+  }, {
+    id: 3,
+    name: "Thabo Mbeki",
+    location: "Johannesburg",
+    quote: "Excellent location and outstanding service. I'll definitely be returning.",
+    rating: 4
+  }];
   return <>
       {/* Hero Section */}
       <div className="relative h-screen min-h-[600px] flex items-center justify-center">
         <Carousel className="w-full h-full absolute inset-0">
-          <CarouselContent>
-            {slides.map((slide, index) => (
-              <CarouselItem key={index} className="h-full">
+          <CarouselContent className="my-0 mx-0 px-0 py-0">
+            {slides.map((slide, index) => <CarouselItem key={index} className="h-full">
                 <div className="relative h-full">
                   <img src={slide} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 hero-gradient"></div>
                 </div>
-              </CarouselItem>
-            ))}
+              </CarouselItem>)}
           </CarouselContent>
           <CarouselPrevious className="left-4" />
           <CarouselNext className="right-4" />
@@ -265,5 +244,4 @@ const HomePage = () => {
       </div>
     </>;
 };
-
 export default HomePage;
