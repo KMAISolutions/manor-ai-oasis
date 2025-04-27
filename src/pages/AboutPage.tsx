@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Bed, Wifi, Car, MapPin, Star } from "lucide-react";
-
 const AboutPage = () => {
-  return (
-    <>
+  return <>
       <div className="relative h-64 md:h-80 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img src="/lovable-uploads/7bb1a59b-d87d-48f0-be1d-7dbc4a480345.png" alt="About The King's Court" className="w-full h-full object-cover" />
@@ -19,22 +17,22 @@ const AboutPage = () => {
       
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center py-0 px-0">
             <div>
               <h6 className="text-manor-gold mb-2 text-4xl text-center font-extrabold mx-0 px-0 py-0">OUR STORY</h6>
               <h2 className="font-serif text-3xl md:text-4xl mb-6 font-semibold text-center">The King's Court Legacy</h2>
-              <p className="mb-4 text-black text-center">
+              <p className="mb-4 text-black text-center px-[14px]">
                 Established in 1998, The King's Court Guest Manor began as a vision to create a luxury retreat 
                 that showcases the best of South African hospitality. Our historic property, once the residence 
                 of a prominent local family, has been carefully restored and transformed into the elegant 
                 guest manor you see today.
               </p>
-              <p className="mb-4 text-center text-black">
+              <p className="mb-4 text-center text-black px-[18px]">
                 Over the years, we have welcomed guests from around the world, providing them with 
                 exceptional service and creating memorable experiences. Our commitment to excellence has 
                 earned us numerous awards and recognition in the hospitality industry.
               </p>
-              <p className="mb-6 text-black text-center">
+              <p className="mb-6 text-black text-center px-[30px]">
                 Today, The King's Court continues to uphold its tradition of luxury and warm hospitality, 
                 while embracing modern amenities and sustainable practices to ensure a comfortable stay 
                 for our guests and a positive impact on our community.
@@ -140,8 +138,6 @@ const AboutPage = () => {
           <div className="border-t border-gray-200"></div>
         </div>
       </div>
-    </>
-  );
+    </>;
 };
-
 export default AboutPage;
