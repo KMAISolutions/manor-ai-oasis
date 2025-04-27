@@ -6,10 +6,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+
 const ContactPage = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,6 +16,7 @@ const ContactPage = () => {
     subject: "",
     message: ""
   });
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const {
       name,
@@ -27,16 +27,15 @@ const ContactPage = () => {
       [name]: value
     }));
   };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real scenario, you'd send this data to your backend
     console.log("Form submitted:", formData);
     toast({
       title: "Message Sent",
       description: "Thank you for your message. We will respond shortly."
     });
 
-    // Reset form
     setFormData({
       name: "",
       email: "",
@@ -45,7 +44,9 @@ const ContactPage = () => {
       message: ""
     });
   };
-  return <>
+
+  return (
+    <>
       {/* Page Header */}
       <div className="relative h-64 md:h-80 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
@@ -63,7 +64,7 @@ const ContactPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
-            <div>
+            <div className="flex flex-col justify-center">
               <h2 className="font-serif text-3xl mb-6 font-extrabold text-center text-[#d4af37]">Get in Touch</h2>
               <p className="mb-8 text-black text-center">
                 Whether you have a question about our accommodations, want to make a reservation, 
@@ -73,20 +74,19 @@ const ContactPage = () => {
               <div className="space-y-6">
                 <Card>
                   <CardContent className="p-6 flex items-start">
-                    <div className="bg-manor-green text-white p-3 rounded-full mr-4">
-                      <Phone size={24} className="bg-manor-green" />
+                    <div className="bg-slate-900 text-white p-3 rounded-full mr-4">
+                      <Phone size={24} />
                     </div>
                     <div>
                       <h3 className="font-serif mb-2 text-[#d4af37] font-normal text-2xl">Phone</h3>
-                      <p className="text-gray-600">+27 21 123 4567</p>
-                      <p className="text-gray-600">+27 21 123 4568</p>
+                      <p className="text-gray-600">072 814 5439</p>
                     </div>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardContent className="p-6 flex items-start">
-                    <div className="bg-manor-green text-white p-3 rounded-full mr-4">
+                    <div className="bg-slate-900 text-white p-3 rounded-full mr-4">
                       <Mail size={24} />
                     </div>
                     <div>
@@ -99,15 +99,15 @@ const ContactPage = () => {
                 
                 <Card>
                   <CardContent className="p-6 flex items-start">
-                    <div className="bg-manor-green text-white p-3 rounded-full mr-4">
+                    <div className="bg-slate-900 text-white p-3 rounded-full mr-4">
                       <MapPin size={24} />
                     </div>
                     <div>
                       <h3 className="font-serif mb-2 text-2xl text-[#d4af37] font-extrabold">Address</h3>
                       <p className="text-gray-600">
-                        123 King's Road<br />
-                        Cape Town<br />
-                        South Africa
+                        70 Van Der Merwe Street<br />
+                        Bela Bela, 0480<br />
+                        Bela-Bela, South Africa
                       </p>
                     </div>
                   </CardContent>
@@ -175,9 +175,13 @@ const ContactPage = () => {
           </div>
           
           <div className="h-96 rounded-lg overflow-hidden shadow-lg">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.2095411462!2d18.42456661575761!3d-33.92518962807456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc67a853553617%3A0x9c746f4df5e5c087!2sCape%20Town%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1619180021302!5m2!1sen!2sus" width="100%" height="100%" style={{
-            border: 0
-          }} allowFullScreen loading="lazy">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.744774731891!2d28.289444!3d-24.880833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec23a8b6c6b8b45%3A0x1b0f2b7b8b8b8b8b!2s70%20Van%20Der%20Merwe%20St%2C%20Bela-Bela%2C%200480!5e0!3m2!1sen!2sza!4v1619180021302!5m2!1sen!2sza"
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen 
+              loading="lazy">
             </iframe>
           </div>
         </div>
@@ -217,6 +221,8 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
-    </>;
+    </>
+  );
 };
+
 export default ContactPage;

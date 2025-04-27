@@ -1,11 +1,11 @@
 
-// A basic service worker implementation for PWA capabilities
-
 const CACHE_NAME = 'kings-court-v1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/manifest.json'
+  '/manifest.json',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -21,7 +21,6 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        // Cache hit - return response
         if (response) {
           return response;
         }

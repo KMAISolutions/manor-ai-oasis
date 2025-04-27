@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Instagram, Facebook } from "lucide-react";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -16,18 +18,27 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 shadow-md py-2' : 'bg-transparent py-4'}`}>
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center bg-slate-900">
         <Link to="/" className="flex items-center">
           <img alt="Kings Court Logo" className="h-12 mr-2" src="/lovable-uploads/e79c1127-d74a-4e00-950b-0f4102e389f5.jpg" />
         </Link>
         
-        <div className="hidden md:flex items-center space-x-6">
+        <div className="hidden md:flex items-center space-x-4">
           <Link to="/" className={`font-medium hover:text-[#D4AF37] transition-colors ${scrolled ? 'text-foreground' : 'text-white text-shadow'}`}>Home</Link>
           <Link to="/about" className={`font-medium hover:text-[#D4AF37] transition-colors ${scrolled ? 'text-foreground' : 'text-white text-shadow'}`}>About</Link>
           <Link to="/rooms" className={`font-medium hover:text-[#D4AF37] transition-colors ${scrolled ? 'text-foreground' : 'text-white text-shadow'}`}>Rooms</Link>
           <Link to="/facilities" className={`font-medium hover:text-[#D4AF37] transition-colors ${scrolled ? 'text-foreground' : 'text-white text-shadow'}`}>Facilities</Link>
           <Link to="/contact" className={`font-medium hover:text-[#D4AF37] transition-colors ${scrolled ? 'text-foreground' : 'text-white text-shadow'}`}>Contact</Link>
+          
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#D4AF37]">
+            <Instagram size={24} />
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#D4AF37]">
+            <Facebook size={24} />
+          </a>
         </div>
         
         <div className="md:hidden flex items-center">
@@ -60,6 +71,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navbar;

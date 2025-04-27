@@ -1,14 +1,27 @@
+
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Star, Wifi, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin, Star, Wifi, Calendar, Instagram, Facebook } from "lucide-react";
+
 const Footer = () => {
-  return <footer className="text-white pt-16 pb-8 bg-slate-200 py-0">
+  return (
+    <footer className="text-white pt-16 pb-8 bg-slate-900">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-0 mx-0 my-0 py-0">
-          <div className="py-0 px-0 mx-0 my-[82px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
             <h3 className="font-serif text-2xl mb-4 text-[#D4AF37]">The King's Court</h3>
-            <p className="mb-6 text-black">Experience luxury accommodation in a beautiful setting. Our guest manor offers exceptional service and comfort.</p>
-            <div className="flex space-x-2">
-              {Array(5).fill(0).map((_, i) => <Star key={i} size={16} className={i < 4 ? "text-[#D4AF37]" : "text-gray-500"} />)}
+            <p className="mb-6 text-gray-300">Experience luxury accommodation in a beautiful setting. Our guest manor offers exceptional service and comfort.</p>
+            <div className="flex space-x-2 mb-4">
+              {Array(5).fill(0).map((_, i) => (
+                <Star key={i} size={16} className={i < 4 ? "text-[#D4AF37]" : "text-gray-500"} />
+              ))}
+            </div>
+            <div className="flex space-x-4">
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#D4AF37]">
+                <Instagram size={24} />
+              </a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#D4AF37]">
+                <Facebook size={24} />
+              </a>
             </div>
           </div>
           
@@ -41,11 +54,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-[#D4AF37]" />
-                <span className="text-black">70 Van Der Merwe Street,<br />Bela Bela, 0480<br />South Africa</span>
+                <span>70 Van Der Merwe Street,<br />Bela Bela, 0480<br />South Africa</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2 text-[#D4AF37]" />
-                <span className="text-black">072 814 5439</span>
+                <span>072 814 5439</span>
               </li>
             </ul>
           </div>
@@ -56,6 +69,8 @@ const Footer = () => {
           <p className="mt-2 text-[[#D4AF37] text-black">Powered By: Kwena Moloto A.I Solutions</p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

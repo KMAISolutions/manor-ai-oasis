@@ -1,12 +1,16 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Bath, Bed, Tv, Check, AirVent, Wifi } from "lucide-react";
 import GuestReviews from "@/components/facilities/GuestReviews";
+
 const RoomsPage = () => {
   const bookingUrl = "https://www.booking.com/hotel/za/the-king-39-s-court-guest-manor.en-gb.html";
-  return <>
+  
+  return (
+    <>
       {/* Page Header */}
       <div className="relative h-64 md:h-80 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
@@ -134,6 +138,8 @@ const RoomsPage = () => {
           <GuestReviews />
         </div>
       </div>
-    </>;
+    </>
+  );
 };
+
 export default RoomsPage;

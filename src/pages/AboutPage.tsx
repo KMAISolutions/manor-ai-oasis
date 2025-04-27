@@ -1,44 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Star, Users } from "lucide-react";
+import { Bed, Wifi, Car, MapPin, Star } from "lucide-react";
+
 const AboutPage = () => {
-  const team = [{
-    name: "Jonathan King",
-    position: "Owner & Managing Director",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-    bio: "With over 20 years in the hospitality industry, Jonathan brings passion and expertise to ensure every guest has an exceptional experience."
-  }, {
-    name: "Elizabeth Moore",
-    position: "General Manager",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-    bio: "Elizabeth oversees all aspects of the guest manor, ensuring that operations run smoothly and guests receive the highest level of service."
-  }, {
-    name: "Michael Chen",
-    position: "Head Chef",
-    image: "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-    bio: "A culinary artist with international experience, Michael creates exquisite dishes that delight our guests with local and international flavors."
-  }];
-  const testimonials = [{
-    id: 1,
-    name: "Sarah M.",
-    location: "United Kingdom",
-    quote: "The King's Court exceeded all my expectations. The service was impeccable and the rooms luxurious.",
-    rating: 5
-  }, {
-    id: 2,
-    name: "David L.",
-    location: "Australia",
-    quote: "Beautiful gardens, excellent food, and the most comfortable bed I've ever slept in. Will definitely return!",
-    rating: 5
-  }, {
-    id: 3,
-    name: "Maria J.",
-    location: "Germany",
-    quote: "A truly peaceful retreat with wonderful staff who made our stay special. The attention to detail was remarkable.",
-    rating: 5
-  }];
-  return <>
+  return (
+    <>
       {/* Page Header */}
       <div className="relative h-64 md:h-80 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
@@ -91,104 +58,67 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      
-      {/* Meet the Team */}
-      <div className="py-20 bg-gray-950">
+
+      {/* Features Section */}
+      <div className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h6 className="font-medium mb-2 text-gray-950">OUR TEAM</h6>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4 text-zinc-950">Meet Our Team</h2>
-            <p className="max-w-2xl mx-auto text-gray-950">
-              Our dedicated team works tirelessly to ensure your stay at The King's Court 
-              is comfortable, enjoyable, and memorable.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => <div key={index} className="scroll-animation">
-                <Card className="overflow-hidden h-full">
-                  <div className="h-64 overflow-hidden">
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="font-serif text-xl font-medium mb-1">{member.name}</h3>
-                    <p className="text-manor-gold mb-3">{member.position}</p>
-                    <p className="text-gray-600">{member.bio}</p>
-                  </CardContent>
-                </Card>
-              </div>)}
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Bed className="text-[#d4af37] w-8 h-8 mr-3" />
+                  <h3 className="font-serif text-xl font-semibold">Comfortable Accommodation</h3>
+                </div>
+                <p className="text-gray-600">
+                  The King's Court Guest Manor in Bela Bela offers air-conditioned rooms with private bathrooms, 
+                  baths, showers, and free toiletries. Each room includes a work desk, TV, electric kettle, and wardrobe.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Wifi className="text-[#d4af37] w-8 h-8 mr-3" />
+                  <h3 className="font-serif text-xl font-semibold">Exceptional Facilities</h3>
+                </div>
+                <p className="text-gray-600">
+                  Guests enjoy a year-round outdoor swimming pool and free WiFi. 
+                  The property features barbecue facilities and free on-site private parking.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <MapPin className="text-[#d4af37] w-8 h-8 mr-3" />
+                  <h3 className="font-serif text-xl font-semibold">Prime Location</h3>
+                </div>
+                <p className="text-gray-600">
+                  Located 15 km from Sondela Nature Reserve, 18 km from Bothasvley Nature Reserve, 
+                  and 48 km from Zebula Golf Course. Nearby attractions include Combretum Game Park (37 km) 
+                  and Elements Private Golf Reserve (24 km).
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Star className="text-[#d4af37] w-8 h-8 mr-3" />
+                  <h3 className="font-serif text-xl font-semibold">Guest Satisfaction</h3>
+                </div>
+                <p className="text-gray-600">
+                  Highly rated for room cleanliness, location, and attentive staff. 
+                  Couples particularly like the location — they rated it 8.9 for a two-person trip.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
-      
-      {/* Values */}
-      <div className="py-20 bg-gray-950">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h6 className="font-medium mb-2 text-zinc-950">OUR VALUES</h6>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4 text-gray-950">What We Stand For</h2>
-            <p className="max-w-2xl mx-auto text-zinc-950">
-              Our core values guide everything we do at The King's Court Guest Manor.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            {[{
-            title: "Excellence",
-            description: "We strive for excellence in every aspect of our service and facilities."
-          }, {
-            title: "Personalization",
-            description: "We believe in tailoring experiences to meet each guest's unique needs."
-          }, {
-            title: "Sustainability",
-            description: "We are committed to sustainable practices that protect our environment."
-          }, {
-            title: "Community",
-            description: "We support our local community and promote local culture and products."
-          }].map((value, index) => <div key={index} className="scroll-animation">
-                <Card className="h-full hover:shadow-md transition-shadow">
-                  <CardContent className="p-6 text-center">
-                    <h3 className="font-serif text-xl font-medium mb-3 text-zinc-950">{value.title}</h3>
-                    <p className="text-zinc-950">{value.description}</p>
-                  </CardContent>
-                </Card>
-              </div>)}
-          </div>
-        </div>
-      </div>
-      
-      {/* Testimonials */}
-      <div className="py-20 bg-gray-950">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h6 className="font-medium mb-2 text-gray-950">TESTIMONIALS</h6>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4 text-zinc-950">Guest Experiences</h2>
-            <p className="max-w-2xl mx-auto text-zinc-950">
-              Don't just take our word for it - see what our guests have to say about their stays.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map(testimonial => <div key={testimonial.id} className="scroll-animation">
-                <Card className="h-full">
-                  <CardContent className="p-6 flex flex-col h-full">
-                    <div className="flex mb-4">
-                      {Array(5).fill(0).map((_, i) => <Star key={i} size={18} className={i < testimonial.rating ? "text-manor-gold" : "text-gray-300"} />)}
-                    </div>
-                    <p className="italic text-gray-700 mb-6 flex-1">"{testimonial.quote}"</p>
-                    <div className="flex items-center">
-                      <div>
-                        <p className="font-medium">{testimonial.name}</p>
-                        <p className="text-sm text-gray-500">{testimonial.location}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>)}
-          </div>
-        </div>
-      </div>
-      
+
       {/* CTA Section */}
       <div className="py-20 text-white bg-slate-900">
         <div className="container mx-auto px-4 text-center">
@@ -208,6 +138,8 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-    </>;
+    </>
+  );
 };
+
 export default AboutPage;
