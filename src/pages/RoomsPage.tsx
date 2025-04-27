@@ -25,10 +25,9 @@ const RoomsPage = () => {
 
   return (
     <>
-      {/* Page Header */}
       <div className="relative h-64 md:h-80 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
-          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117177319.jpg?k=87c6a02ca9a3be5859e626bb2998483f5e66e16c3ebd6f0d56be30296940d3c5&o=&hp=1" alt="Accommodation at The King's Court" className="w-full h-full object-cover" />
+          <img src="/lovable-uploads/40dfed37-84c2-485d-b479-930e5c0f404c.png" alt="Rooms at The King's Court" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-gradient"></div>
         </div>
         <div className="container mx-auto px-4 z-10 text-white text-center">
@@ -172,7 +171,6 @@ const RoomsPage = () => {
           <GuestReviews />
         </div>
 
-        {/* Container before footer */}
         <div className="w-full py-8 bg-white">
           <div className="container mx-auto px-4">
             <div className="border-t border-gray-200"></div>

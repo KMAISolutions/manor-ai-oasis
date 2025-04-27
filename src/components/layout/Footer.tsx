@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Star, Wifi, Calendar, Instagram, Facebook } from "lucide-react";
+
 const Footer = () => {
-  return <footer className="text-white pt-16 pb-8 bg-slate-900">
+  return (
+    <footer className="text-white pt-16 pb-8 bg-slate-900">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -61,9 +63,20 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 text-sm">
           <p className="text-white">&copy; {new Date().getFullYear()} The King's Court Guest Manor. All Rights Reserved.</p>
-          <p className="mt-2 text-[[#D4AF37] text-white">Powered By: Kwena Moloto A.I Solutions</p>
+          <p className="mt-2">
+            <a 
+              href="https://www.kwenamai.co.za" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-[#D4AF37] hover:text-[#D4AF37]/80 transition-colors"
+            >
+              Powered By: Kwena Moloto A.I Solutions
+            </a>
+          </p>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

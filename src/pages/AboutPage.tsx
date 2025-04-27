@@ -6,10 +6,9 @@ import { Bed, Wifi, Car, MapPin, Star } from "lucide-react";
 const AboutPage = () => {
   return (
     <>
-      {/* Page Header */}
       <div className="relative h-64 md:h-80 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
-          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117175828.jpg?k=fc25b50159d732bc2468b8603e5fb947e05d1c788d67294c320fb75e90bd3f3a&o=&hp=1" alt="About The King's Court" className="w-full h-full object-cover" />
+          <img src="/lovable-uploads/7bb1a59b-d87d-48f0-be1d-7dbc4a480345.png" alt="About The King's Court" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-gradient"></div>
         </div>
         <div className="container mx-auto px-4 z-10 text-white text-center">
@@ -18,7 +17,6 @@ const AboutPage = () => {
         </div>
       </div>
       
-      {/* Story Section */}
       <div className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -59,7 +57,6 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* Features Section */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
@@ -119,7 +116,6 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* CTA Section */}
       <div className="py-20 text-white bg-slate-900">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-serif text-3xl mb-6 text-[#d4af37] font-extrabold md:text-5xl">Ready to Experience The King's Court?</h2>
@@ -139,7 +135,6 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* Container before footer */}
       <div className="w-full py-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="border-t border-gray-200"></div>

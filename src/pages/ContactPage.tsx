@@ -47,10 +47,9 @@ const ContactPage = () => {
 
   return (
     <>
-      {/* Page Header */}
       <div className="relative h-64 md:h-80 flex items-center justify-center">
         <div className="absolute inset-0 z-0">
-          <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/117174162.jpg?k=306f853bd5763956add54358df2126e07fcd3f192a1d24c53935d112e7519c7b&o=&hp=1" alt="Contact The King's Court" className="w-full h-full object-cover" />
+          <img src="/lovable-uploads/4be0e96b-47fb-4342-b11a-27f5b176a321.png" alt="Contact The King's Court" className="w-full h-full object-cover" />
           <div className="absolute inset-0 hero-gradient"></div>
         </div>
         <div className="container mx-auto px-4 z-10 text-white text-center">
@@ -59,7 +58,6 @@ const ContactPage = () => {
         </div>
       </div>
       
-      {/* Contact Info & Form Section */}
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -72,7 +70,6 @@ const ContactPage = () => {
             </div>
             
             <div className="grid md:grid-cols-2 gap-12">
-              {/* Contact Information */}
               <div className="flex flex-col justify-center">
                 <div className="space-y-6">
                   <Card>
@@ -118,7 +115,6 @@ const ContactPage = () => {
                 </div>
               </div>
               
-              {/* Contact Form */}
               <div className="scroll-animation">
                 <Card className="overflow-hidden">
                   <div className="bg-manor-green p-6 text-white">
@@ -168,7 +164,6 @@ const ContactPage = () => {
         </div>
       </div>
       
-      {/* Map Section */}
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -191,7 +186,6 @@ const ContactPage = () => {
         </div>
       </div>
       
-      {/* Container before footer */}
       <div className="w-full py-8 bg-white">
         <div className="container mx-auto px-4">
           <div className="border-t border-gray-200"></div>
