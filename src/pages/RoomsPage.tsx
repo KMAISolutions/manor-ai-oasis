@@ -4,9 +4,25 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Bath, Bed, Tv, Check, AirVent, Wifi } from "lucide-react";
 import GuestReviews from "@/components/facilities/GuestReviews";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const RoomsPage = () => {
   const bookingUrl = "https://www.booking.com/hotel/za/the-king-39-s-court-guest-manor.en-gb.html";
+
+  const kingSuiteImages = [
+    "/lovable-uploads/b00e21c3-7777-4677-b5fd-a12561f53b41.jpg",
+  ];
+
+  const doubleRoomImages = [
+    "/lovable-uploads/b6895fc9-055d-4d0a-95d5-1c34f9064797.jpg",
+  ];
+
   return (
     <>
       {/* Page Header */}
@@ -37,11 +53,21 @@ const RoomsPage = () => {
             <TabsTrigger value="double-room" className="bg-slate-900 hover:bg-slate-800 text-white mx-[16px]">Deluxe Double Room</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="king-suite" className="text-[#d4af37] font-extrabold text-4xl">
+          <TabsContent value="king-suite">
             <Card>
               <CardContent className="grid md:grid-cols-2 gap-8 p-6">
                 <div className="relative h-[400px] overflow-hidden rounded-lg">
-                  <img alt="Deluxe King Suite" className="w-full h-full object-cover" src="/lovable-uploads/b00e21c3-7777-4677-b5fd-a12561f53b41.jpg" />
+                  <Carousel className="w-full h-full">
+                    <CarouselContent>
+                      {kingSuiteImages.map((image, index) => (
+                        <CarouselItem key={index}>
+                          <img src={image} alt={`King Suite View ${index + 1}`} className="w-full h-[400px] object-cover" />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-4" />
+                    <CarouselNext className="right-4" />
+                  </Carousel>
                 </div>
                 <div className="space-y-6">
                   <div>
@@ -88,7 +114,17 @@ const RoomsPage = () => {
             <Card>
               <CardContent className="grid md:grid-cols-2 gap-8 p-6">
                 <div className="relative h-[400px] overflow-hidden rounded-lg">
-                  <img alt="Deluxe Double Room" className="w-full h-full object-cover" src="/lovable-uploads/b6895fc9-055d-4d0a-95d5-1c34f9064797.jpg" />
+                  <Carousel className="w-full h-full">
+                    <CarouselContent>
+                      {doubleRoomImages.map((image, index) => (
+                        <CarouselItem key={index}>
+                          <img src={image} alt={`Double Room View ${index + 1}`} className="w-full h-[400px] object-cover" />
+                        </CarouselItem>
+                      ))}
+                    </CarouselContent>
+                    <CarouselPrevious className="left-4" />
+                    <CarouselNext className="right-4" />
+                  </Carousel>
                 </div>
                 <div className="space-y-6">
                   <div>

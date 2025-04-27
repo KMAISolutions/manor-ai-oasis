@@ -3,6 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Bed, Wifi, Star, Calendar, MapPin, Users } from "lucide-react";
 import { Link } from "react-router-dom";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 const HomePage = () => {
   const animatedElements = useRef<HTMLElement[]>([]);
   useEffect(() => {
@@ -20,58 +28,32 @@ const HomePage = () => {
     });
     return () => observer.disconnect();
   }, []);
-  const bookingUrl = "https://www.booking.com/hotel/za/the-king-39-s-court-guest-manor.en-gb.html";
-  const rooms = [{
-    id: 1,
-    title: "Luxury Suite",
-    image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/117177319.jpg?k=87c6a02ca9a3be5859e626bb2998483f5e66e16c3ebd6f0d56be30296940d3c5&o=&hp=1",
-    price: "R 2,500",
-    description: "Spacious suite with a king-size bed and luxury amenities.",
-    features: ["King-size bed", "En-suite bathroom", "Air conditioning", "Mini bar"]
-  }, {
-    id: 2,
-    title: "Executive Room",
-    image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/117175723.jpg?k=f40dc9c0aa40beb8dca45e0e894e05a6cb960963e7acf9a8c15f2019e22c2775&o=&hp=1",
-    price: "R 1,800",
-    description: "Comfortable room with quality furnishings and garden views.",
-    features: ["Queen-size bed", "Private bathroom", "Garden view", "Work desk"]
-  }, {
-    id: 3,
-    title: "Family Suite",
-    image: "https://cf.bstatic.com/xdata/images/hotel/max1024x768/117176762.jpg?k=ecd95caa3804328a20cce8f58f18ffdf9657dd33185af4c4ba0dceec77d35d82&o=&hp=1",
-    price: "R 3,200",
-    description: "Spacious suite perfect for families with separate living area.",
-    features: ["King-size bed + Twin beds", "Two bathrooms", "Lounge area", "Balcony"]
-  }];
-  const testimonials = [{
-    id: 1,
-    name: "Sarah M.",
-    location: "United Kingdom",
-    quote: "The King's Court exceeded all my expectations. The service was impeccable and the rooms luxurious.",
-    rating: 5
-  }, {
-    id: 2,
-    name: "David L.",
-    location: "Australia",
-    quote: "Beautiful gardens, excellent food, and the most comfortable bed I've ever slept in. Will definitely return!",
-    rating: 5
-  }, {
-    id: 3,
-    name: "Maria J.",
-    location: "Germany",
-    quote: "A truly peaceful retreat with wonderful staff who made our stay special. The attention to detail was remarkable.",
-    rating: 5
-  }];
+
+  const slides = [
+    "/lovable-uploads/7a013118-6f29-478f-bea7-b79c84c50797.png",
+    "/lovable-uploads/5f6280d4-717d-40f9-81fd-9042a840789f.png",
+    "/lovable-uploads/5498925a-a717-429c-9c26-fb11adf7cc41.jpg"
+  ];
+
   return <>
       {/* Hero Section */}
       <div className="relative h-screen min-h-[600px] flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <img src="/lovable-uploads/5f6280d4-717d-40f9-81fd-9042a840789f.png" alt="The King's Court Guest Manor" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 hero-gradient"></div>
-        </div>
+        <Carousel className="w-full h-full absolute inset-0">
+          <CarouselContent>
+            {slides.map((slide, index) => (
+              <CarouselItem key={index} className="h-full">
+                <div className="relative h-full">
+                  <img src={slide} alt={`Slide ${index + 1}`} className="w-full h-full object-cover" />
+                  <div className="absolute inset-0 hero-gradient"></div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-4" />
+          <CarouselNext className="right-4" />
+        </Carousel>
         
         <div className="container mx-auto px-4 z-10 text-white text-center">
-          <img alt="Kings Court Logo" src="/lovable-uploads/a59c40a4-3ed0-460b-b037-903a2cc0ba5e.jpg" className="w-48 mx-auto mb-6 object-fill" />
           <h1 className="font-serif text-4xl font-bold mb-4 text-shadow text-[#d4af37] md:text-6xl">Welcome to The King's Court</h1>
           <p className="text-xl mb-8 max-w-3xl mx-auto text-shadow font-semibold md:text-3xl">Experience luxury accommodation in the heart of South Africa</p>
           <div className="flex gap-4 justify-center">
@@ -147,12 +129,17 @@ const HomePage = () => {
           <div className="text-center mb-12">
             <h6 className="text-[#D4AF37] mb-2 text-5xl font-bold">ACCOMMODATION</h6>
             <h2 className="font-serif text-3xl md:text-4xl mb-4">Our Elegant Rooms</h2>
-            <p className="max-w-2xl mx-auto text-black">
+            <p className="max-w-2xl mx-auto text-black mb-8">
               Comfortable Accommodation is what you get at The King's Court Guest Manor in Bela Bela, 
               offering air-conditioned rooms with private bathrooms, baths, showers, and free toiletries. 
               Each room includes a work desk, TV, electric kettle, and wardrobe. 
               We have the option of the Deluxe King Suite and the Deluxe Double Room.
             </p>
+            <Link to="/rooms">
+              <Button variant="outline" className="border-[#D4AF37] text-white text-lg font-extrabold bg-slate-900 hover:bg-slate-800">
+                View Rooms
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -244,6 +231,14 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      
+      {/* Container before footer */}
+      <div className="w-full py-8 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="border-t border-gray-200"></div>
+        </div>
+      </div>
     </>;
 };
+
 export default HomePage;
